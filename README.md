@@ -1,5 +1,5 @@
 # Kitty Icebreaker
-Kitty Icebreaker is a local workload runner for untrusted or potentially unsafe workloads built around Firecracker microVMs.
+**Kitty Icebreaker** is a local workload runner for untrusted or potentially unsafe workloads built around Firecracker microVMs.
 
 The goal is to execute untrusted workloads in isolated, disposable microVMs. 
 
@@ -33,3 +33,7 @@ Kitty Icebreaker starts a Firecracker microVM using the kernel and initramfs fro
 
 > [NOTE]
 > The Firecracker binary, kernel, and initramfs paths are currently hardcoded and are not configurable yet.
+
+## Security
+
+Kitty Icebreaker is currently a PoC and runs Firecracker directly without the `jailer` recommended by the Firecracker project ~~(not that it's capable of running any workloads yet)~~.
