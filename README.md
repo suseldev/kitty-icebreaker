@@ -19,3 +19,17 @@ Built binaries are written to the `build/` directory.
 Builds a minimal initramfs with `kittyinit` as the guest init.
 
 The resulting archive is written to `build/initramfs.cpio.gz`
+
+## Run
+
+Before running Kitty Icebreaker, download a Firecracker binary and a compatible Linux kernel from the official Firecracker CI artifacts (see: [Firecracker Getting Started Guide](https://github.com/firecracker-microvm/firecracker/blob/main/docs/getting-started.md)).
+
+Place the kernel image in the `build/`directory.
+
+Then start the microVM:
+`./build/kittyice run`
+
+Kitty Icebreaker starts a Firecracker microVM using the kernel and initramfs from the `build/` directory.
+
+> [NOTE]
+> The Firecracker binary, kernel, and initramfs paths are currently hardcoded and are not configurable yet.
